@@ -176,7 +176,6 @@ body .header-wrapper .header {
   background-image: url(/src/img/buildings.svg);
   background-position: center;
   background-size: cover;
-  height: 22.5rem;
   width: 100%;
   justify-content: flex-end;
   align-content: flex-end;
