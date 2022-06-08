@@ -1,0 +1,241 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+
+@use 'reset';
+@use 'variables';
+@use 'mixins';
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'League Spartan', sans-serif;
+
+	.header-wrapper{
+		@include mixins.bp-large{
+			display: flex;
+		}
+		.header{
+			background-image: url(/src/img/buildings.svg);
+			background-position: center;
+			background-size: cover;
+			height: 22.5rem;
+			width: 100%;
+			justify-content: flex-end;
+			align-content: flex-end;
+
+			@include mixins.bp-large{
+				height: 35rem;
+				width: 60%;
+			}
+
+			.hero{
+				@include mixins.bp-large{
+					display: flex;
+				}
+
+				h1{
+					text-align: center;
+					font-weight: 700;
+					font-size: 2rem;
+					padding: 3rem;
+					color: white;
+
+					@include mixins.bp-large{
+						text-align: left;
+					}
+				}
+
+				nav{
+					display: none;
+
+					@include mixins.bp-large{
+						display: flex;
+					}
+
+				}
+
+				.container{
+					@include mixins.bp-large{
+						display: flex;
+						padding: 3.5rem;						
+						
+					}
+
+					a{
+						@include mixins.bp-large{
+							margin-right: 2rem;
+							text-decoration: none;
+							color: white;
+							font-size: 1.1rem;
+						}
+					}
+
+					
+				}
+			}
+
+			.slider{
+				background-color: black;
+				display: flex;
+				// position: absolute;
+				align-content: space-between;
+				padding: 1.5rem;
+				// top: -10rem;
+				// left: 20.5rem;
+
+
+
+				.slide__buttons{
+					margin-right: 3rem;
+				}
+			}
+		}
+
+		.discover{
+			position: relative;
+			
+			@include mixins.bp-large{
+				width: 40%;
+			}
+
+			.wrapper{
+				text-align: left;
+				margin-top: 5rem;
+				margin-bottom: 4.5rem;
+				margin-left: 2rem;
+				margin-right: 3rem;
+				margin-bottom: 5rem;
+
+				@include mixins.bp-large{
+					margin-bottom: 0rem;
+					margin-left: 3.5rem;
+				}
+
+				h2{
+					font-size: 2rem;
+					font-weight: 500;
+					margin-bottom: 1.5rem;
+				}
+
+				p{
+					text-align: left;
+					line-height: 1.3rem;
+					margin-bottom: 5rem;
+					font-size: 1.25rem;
+					color: #a0a0a0;
+				}
+
+				a{
+					text-decoration: none;
+					color: black;
+					letter-spacing: 1rem;
+					display: block;
+					transition: letter-spacing 200ms ease-in;
+				}
+
+				a:hover{
+					letter-spacing: 20px;
+				}
+			}
+
+			
+		}
+	}
+	
+	.lower-wrapper{
+		
+
+		.row{
+			@include mixins.bp-large{
+				display: flex;
+			}
+
+			.sky{
+				background-image: url(/src/img/sky.svg);
+				background-position: center;
+				background-size: cover;
+				height: 22.5rem;
+				width: 100%;
+				margin-bottom: 5rem;
+
+				@include mixins.bp-large{
+					height: 16rem;
+					width: 30%;
+					margin-bottom: 0rem;
+				}
+			}
+
+			.innovation{
+				text-align: left;
+				margin-top: 5rem;
+				margin-bottom: 4.5rem;
+				margin-left: 2rem;
+				margin-right: 3rem;
+				margin-bottom: 5rem;
+
+				@include mixins.bp-large{
+					width: 40%;
+					margin-bottom: 0rem;
+					margin-top: 3.5rem;
+				}
+
+				h2{
+					margin-bottom: 1.5rem;
+					letter-spacing: 0.5rem;
+				}
+
+				p{
+					font-size: 1.05rem;
+					line-height: 1.3rem;
+					color: #a0a0a0;
+				}
+			}
+
+			.man{
+				background-image: url(/src/img/man.svg);
+				background-position: center;
+				background-size: cover;
+				height: 22.5rem;
+				width: 100%;
+
+				@include mixins.bp-large{
+					height: 16rem;
+					width: 30%;
+				}
+			}
+		}
+
+		
+	}
+}
+
+
+

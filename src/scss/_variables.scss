@@ -1,0 +1,27 @@
+/* 0. Breakpoints ==================================== */
+// Small tablets and large smartphones (landscape view)
+
+$breakpoint-phone: 576px;
+
+// Small tablets (portrait view)
+
+$breakpoint-tablet: 768px;
+
+// Tablets and small desktops
+
+$breakpoint-desktop: 992px;
+
+// Large tablets and desktops
+
+$breakpoint-xl: 1200px;
+
+/* 1. Colors ========================================= */
+
+$white: #fff;
+$orange: #ffb703;
+$transparent: #ffb80371;
+$blue: #023047;
+$btransparent: #02304762;
+$bdtransparent: #023047e3;
+$babyblue: #219ebc;
+$grey: #999;
