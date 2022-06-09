@@ -176,6 +176,8 @@ body .header-wrapper .header {
   background-image: url(/src/img/buildings.svg);
   background-position: center;
   background-size: cover;
+  height: 22.5rem;
+  display: flex;
   width: 100%;
   justify-content: flex-end;
   align-content: flex-end;
@@ -228,11 +230,20 @@ body .header-wrapper .header .hero nav {
 body .header-wrapper .header .slider {
   background-color: black;
   display: flex;
+  align-self: flex-end;
   align-content: space-between;
-  padding: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  body .header-wrapper .header .slider {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 body .header-wrapper .header .slider .slide__buttons {
-  margin-right: 3rem;
+  padding: 1.5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  align-items: center;
 }
 body .header-wrapper .discover {
   position: relative;

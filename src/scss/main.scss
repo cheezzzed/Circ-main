@@ -46,7 +46,8 @@ body{
 			background-image: url(/src/img/buildings.svg);
 			background-position: center;
 			background-size: cover;
-			// height: 22.5rem;
+			height: 22.5rem;
+			display: flex;
 			width: 100%;
 			justify-content: flex-end;
 			align-content: flex-end;
@@ -105,16 +106,20 @@ body{
 			.slider{
 				background-color: black;
 				display: flex;
+				align-self: flex-end;
 				// position: absolute;
 				align-content: space-between;
-				padding: 1.5rem;
 				// top: -10rem;
 				// left: 20.5rem;
 
-
+				@include mixins.bp-large{
+					transform: translateX(100%);
+				}
 
 				.slide__buttons{
-					margin-right: 3rem;
+					padding: 1.5rem;
+					transform: rotate(180deg);
+					align-items: center;
 				}
 			}
 		}
