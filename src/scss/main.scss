@@ -107,19 +107,24 @@ body{
 				background-color: black;
 				display: flex;
 				align-self: flex-end;
-				// position: absolute;
-				align-content: space-between;
-				// top: -10rem;
-				// left: 20.5rem;
 
 				@include mixins.bp-large{
 					transform: translateX(100%);
+					align-items: center;
 				}
 
 				.slide__buttons{
 					padding: 1.5rem;
+					
+				}
+
+				.slide__buttons--left{
 					transform: rotate(180deg);
-					align-items: center;
+
+				}
+
+				.slide__buttons--right{
+					transform: translate(0px, 4px);
 				}
 			}
 		}

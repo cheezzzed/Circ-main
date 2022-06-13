@@ -231,19 +231,24 @@ body .header-wrapper .header .slider {
   background-color: black;
   display: flex;
   align-self: flex-end;
-  align-content: space-between;
 }
 @media screen and (min-width: 992px) {
   body .header-wrapper .header .slider {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    align-items: center;
   }
 }
 body .header-wrapper .header .slider .slide__buttons {
   padding: 1.5rem;
+}
+body .header-wrapper .header .slider .slide__buttons--left {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  align-items: center;
+}
+body .header-wrapper .header .slider .slide__buttons--right {
+  -webkit-transform: translate(0px, 4px);
+          transform: translate(0px, 4px);
 }
 body .header-wrapper .discover {
   position: relative;
